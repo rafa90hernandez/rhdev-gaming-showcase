@@ -71,6 +71,55 @@ body::before {
   font-size: 18px;
 }
 
+.hero-tags {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  max-width: 800px;
+}
+
+.hero-stats {
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(160px, 1fr));
+  gap: 18px;
+  max-width: 760px;
+  width: 100%;
+}
+
+.stat-card {
+  background: rgba(17, 17, 17, 0.78);
+  border: 1px solid rgba(57, 255, 20, 0.35);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 0 18px rgba(57, 255, 20, 0.12);
+  backdrop-filter: blur(6px);
+}
+
+.stat-card strong {
+  display: block;
+  color: #39ff14;
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.stat-card span {
+  color: #ccc;
+  font-size: 14px;
+}
+
+.hero-tags span {
+  background: rgba(17, 17, 17, 0.75);
+  border: 1px solid rgba(57, 255, 20, 0.45);
+  color: #39ff14;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: bold;
+  box-shadow: 0 0 12px rgba(57, 255, 20, 0.12);
+}
+
 .hero-actions {
   margin-top: 35px;
   display: flex;
@@ -89,18 +138,21 @@ body::before {
 }
 
 .primary-button {
-  background: linear-gradient(180deg, #ffd700, #ffb300);
+  background: linear-gradient(180deg, #39ff14, #18c800);
   color: #111;
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.35);
 }
 
 .secondary-button {
-  border: 2px solid #ffd700;
-  color: #ffd700;
+  background: linear-gradient(180deg, #39ff14, #18c800);
+  color: #111;
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.35);
 }
 
 .primary-button:hover,
 .secondary-button:hover {
   transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(57, 255, 20, 0.45);
 }
 
 .projects-section,
@@ -303,6 +355,10 @@ body::before {
 
   .hero h1 {
     font-size: 38px;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr;
   }
 
   .projects-section h2,
